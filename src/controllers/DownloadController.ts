@@ -10,8 +10,8 @@ import Str from './../helpers/Str';
 
 export default class DownloadController
 {
-    public static async download(req: Request, res: Response): Promise<Response> {
-
+    public static async download(req: Request, res: Response): Promise<Response>
+    {
         const video: Video = req.body;
 
         const videoInfo: ytdl.MoreVideoDetails = (await ytdl.getBasicInfo(video.url)).videoDetails;
